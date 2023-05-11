@@ -135,8 +135,7 @@ class FlutterForegroundTask {
       FlutterForegroundTaskPlatform.instance.isRunningService;
 
   /// Get the [ReceivePort].
-  static Future<ReceivePort?> get receivePort async {
-    if (await isRunningService == false) return null;
+  static ReceivePort? get receivePort {
     return _registerPort();
   }
 
